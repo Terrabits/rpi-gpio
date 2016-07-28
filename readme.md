@@ -1,4 +1,10 @@
-Raspberry pi GPIO toggle speed test.
+Raspberry Pi GPIO Speed Test
+============================
+
+Requirements
+------------
+- Raspberry Pi Rev 2
+- Raspbian jessie (2016-05-27-raspbian-jessie.zip)
 
 python-rpi
 -----------
@@ -24,7 +30,7 @@ c-register
 
 bcm2835
 -------
-0.  `apt-get install autoconf=1.14`
+0.  `apt-get install autoconf=1.14.1`
 1.  cd into `lib/bcm2835-1.50`
 2.  `aclocal`
 3.  `./configure`
