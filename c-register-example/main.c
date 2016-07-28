@@ -71,32 +71,26 @@ int main(int argc, char **argv)
  \************************************************************************/
 
   // Set GPIO pins 7-11 to output
-  INP_GPIO(11);
-  OUT_GPIO(11);
-  // for (g=7; g<=11; g++)
-  // {
-  //   INP_GPIO(g); // must use INP_GPIO before we can use OUT_GPIO
-  //   OUT_GPIO(g);
-  // }
+  for (g=0; g<=17; g++)
+  {
+    INP_GPIO(g); // must use INP_GPIO before we can use OUT_GPIO
+    OUT_GPIO(g);
+  }
 
-  // for (rep=0; rep<10; rep++)
-  // {
-  //    for (g=7; g<=11; g++)
-  //    {
-  //      GPIO_SET = 1<<g;
-  //      sleep(1);
-  //    }
-  //    for (g=7; g<=11; g++)
-  //    {
-  //      GPIO_CLR = 1<<g;
-  //      sleep(1);
-  //    }
-  // }
-
-  // Toggle GPIO pin 11
-  while (1) {
-    GPIO_SET = 1<<11;
-    GPIO_CLR = 1<<11;
+  for (rep=0; rep<10; rep++)
+  {
+     for (g=0; g<=17; g++)
+     {
+       printf("Setting pin %d", g);
+       GPIO_SET = 1<<g;
+       sleep(500);
+     }
+     for (g=0; g<=17; g++)
+     {
+       printf("Clearing pin %d", g);
+       GPIO_CLR = 1<<g;
+       sleep(500);
+     }
   }
 
   return 0;

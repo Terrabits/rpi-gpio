@@ -19,7 +19,7 @@
 #include <bcm2835.h>
 
 // Blinks on RPi pin GPIO 11
-#define PIN RPI_GPIO_P1_11
+#define PIN RPI_V2_GPIO_P1_11
 
 int main(int argc, char **argv)
 {
