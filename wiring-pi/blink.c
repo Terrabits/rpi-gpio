@@ -5,16 +5,13 @@
 int main(void) {
     wiringPiSetup();
 
-    int pin;
-    for (pin=14; pin<=14; pin++) {
-        pinMode(pin, OUTPUT);
-    }
-    
-    for (pin=14; pin<=14; pin++) {
-        digitalWrite(pin, HIGH);
-        delay(500);
-        digitalWrite(pin, LOW);
-        delay(500);
+    int pin = 14;
+    pinMode(pin, OUTPUT);
+    while (1) {
+      digitalWrite(pin, HIGH);
+      // delay(500);
+      digitalWrite(pin, LOW );
+      // delay(500);
     }
 
     return 0;
