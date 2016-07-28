@@ -49,6 +49,13 @@ you want to change it or regenerate `configure' using a newer version
 of `autoconf'.
 
    The simplest way to compile this package is:
+   
+  a. Install autoconf on raspbian:
+     `sudo apt-get install autoconf=1.14(.1)`
+  
+  b. Make sure /m4 directory exists to avoid warning
+  
+  c. `aclocal` to regenerate aclocal.m4
 
   1. `cd' to the directory containing the package's source code and type
      `./configure' to configure the package for your system.
