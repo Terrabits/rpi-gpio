@@ -1,7 +1,7 @@
-all: blink
+all: wiring-pi
 
-blink:
-	gcc -Wall -o blink blink.c -lwiringPi
+wiring-pi:
+	gcc -Wall -o wiring-pi main.c -lwiringPi
 
 clean:
-	rm blink
+	rm wiring-pi
