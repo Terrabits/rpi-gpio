@@ -81,13 +81,13 @@ int main(int argc, char **argv)
   {
      for (g=0; g<=17; g++)
      {
-       printf("Setting pin %d", g);
+       printf("Setting pin %d\n", g);
        GPIO_SET = 1<<g;
        sleep(500);
      }
      for (g=0; g<=17; g++)
      {
-       printf("Clearing pin %d", g);
+       printf("Clearing pin %d\n", g);
        GPIO_CLR = 1<<g;
        sleep(500);
      }
