@@ -71,7 +71,7 @@ int main(int argc, char **argv)
  \************************************************************************/
 
   // Set GPIO pins 7-11 to output
-  for (g=0; g<=34; g++)
+  for (g=0; g<=17; g++)
   {
     INP_GPIO(g); // must use INP_GPIO before we can use OUT_GPIO
     OUT_GPIO(g);
@@ -79,16 +79,16 @@ int main(int argc, char **argv)
 
   for (rep=0; rep<10; rep++)
   {
-     for (g=0; g<=34; g++)
+     for (g=0; g<=17; g++)
      {
        printf("Setting pin %d\n", g);
-       GPIO_SET = 1<<g;
+       GPIO_SET = 1 << (g & 31); // from wiringPi.c digitalWrite
        usleep(250*1000);
      }
-     for (g=0; g<=34; g++)
+     for (g=0; g<=17; g++)
      {
        printf("Clearing pin %d\n", g);
-       GPIO_CLR = 1<<g;
+       GPIO_CLR = 1 << (g & 31); // from wiringPi.c digitalWrite
        usleep(250*1000);
      }
   }
