@@ -1,14 +1,13 @@
 Raspberry pi GPIO toggle speed test.
 
 python-rpi
-==========
-
+-----------
 1. cd into `./python-rpi`
 2. `./main.py`
 3. observe pin 11
 
 wiring-pi
-=========
+---------
 1. cd into `wiring-pi\`
 2. `make`
 3. `sudo ./wiring-pi`
@@ -16,7 +15,7 @@ wiring-pi
 5. (optional) `make clean`
 
 c-register
-==========
+----------
 1. cd into `c-register\`
 2. make
 3. sudo `./register`
@@ -24,7 +23,7 @@ c-register
 5. (optional) `make clean`
 
 bcm2835
-========
+-------
 0.  `apt-get install autoconf=1.14`
 1.  cd into `lib/bcm2835-1.50`
 2.  `aclocal`
@@ -39,13 +38,12 @@ bcm2835
 11. observe pin 11
 12. (optional) `make clean`
 
-
 Results
-========
+-------
 
-Test       | Language | Library       | Speed
-----------------------------------------------------
-python-rpi | Python   | RPi.GPIO      | 64   KHz
-wiring-pi  | c        | wiringPi      | 4.44 MHz
-c-register | c        | mmap /dev/mem | Not working
-bcm2835    | c        | bcm2835 lib   | Not working
+|Test       | Language | Library       | Speed       |
+|-----------|----------|---------------|-------------|
+|python-rpi | Python   | RPi.GPIO      | 64   KHz    |
+|wiring-pi  | c        | wiringPi      | 4.44 MHz    |
+|c-register | c        | mmap /dev/mem | Not working |
+|bcm2835    | c        | bcm2835 lib   | Not working |
