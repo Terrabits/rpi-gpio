@@ -94,7 +94,7 @@ int main(int argc, char **argv)
   // }
 
   // Toggle GPIO pin 11
-  while (true) {
+  while (1) {
     GPIO_SET = 1<<11;
     GPIO_CLR = 1<<11;
   }
