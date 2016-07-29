@@ -1,7 +1,7 @@
 Raspberry Pi GPIO Speed Test
 ============================
 
-My attempt to recreate the measurements from this blog post:
+My attempt to recreate the measurements from this blog post:  
 http://codeandlife.com/2012/07/03/benchmarking-raspberry-pi-gpio-speed/
 
 Requirements
