@@ -30,7 +30,7 @@ c-register
 
 bcm2835
 -------
-0.  `apt-get install autoconf=1.14.1`
+0.  `sudo apt-get install autoconf=1.14.1`
 1.  cd into `lib/bcm2835-1.50`
 2.  `aclocal`
 3.  `./configure`
@@ -43,6 +43,12 @@ bcm2835
 10. `sudo ./bcm2835`
 11. observe pin 11
 12. (optional) `make clean`
+
+python-c-wiring-pi
+------------------
+0. `sudo apt-get install python-cffi`
+1. `make`
+2. `sudo ./main.py`
 
 Results
 -------
