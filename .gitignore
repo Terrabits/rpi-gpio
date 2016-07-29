@@ -1,0 +1,8 @@
+# Binaries
+*.so
+*.a
+*.out
+
+# Executables
+c-register/register
+wiring-pi/wiring-pi
