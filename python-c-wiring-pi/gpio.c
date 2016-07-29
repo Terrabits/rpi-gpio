@@ -1,15 +1,15 @@
 #include "gpio.h"
 #include <stdio.h>
 #include <unistd.h>
-// #include <wiringPi.h>
+#include <wiringPi.h>
 
 
 static int pin_ = 0;
 
 void setPin(int pin) {
   pin_ = pin;
-  // wiringPiSetup();
-  // pinMode(pin_, OUTPUT);
+  wiringPiSetup();
+  pinMode(pin_, OUTPUT);
 }
 
 void setPinHigh() {

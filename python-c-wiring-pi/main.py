@@ -8,7 +8,7 @@ void setPinHigh();
 void setPinLow ();
 void freeRun   ();
 """)
-C = ffi.dlopen("libgpio.so")
+C = ffi.dlopen("./libgpio.so")
 
 C.setPin(14);
 while(True):
