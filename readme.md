@@ -56,9 +56,14 @@ python-c-wiring-pi
 Results
 -------
 
-|Test       | Language | Library       | Speed       |
-|-----------|----------|---------------|-------------|
-|python-rpi | Python   | RPi.GPIO      | 64   KHz    |
-|wiring-pi  | c        | wiringPi      | 4.44 MHz    |
-|c-register | c        | mmap /dev/mem | Not working |
-|bcm2835    | c        | bcm2835 lib   | Not working |
+|Test               | Language  | Library          | Speed       |
+|-------------------|---------- |------------------|-------------|
+|python-rpi         | Python    | RPi.GPIO         | 64   KHz    |
+|python-c-wiring-pi | Python, c | Python, wiringPi | 54.4 KHz    |
+|wiring-pi          | c         | wiringPi         | 4.44 MHz    |
+|c-register         | c         | mmap /dev/mem    | Not working |
+|bcm2835            | c         | bcm2835 lib      | Not working |
+
+Conclusion
+----------
+If python is controlling the individual high/low calls, it limits the rate of the GPIO output. To achieve a higher pulse rate than ~50-70 KHz, the low-level GPIO toggling should be done in c. High-level application control can still be done in python, which is what python excels at. There would still be a slight speed penalty in this. For the absolute fastest control rate, pure c should be used.
